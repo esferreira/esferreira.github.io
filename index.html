@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rebellion + Babadoc</title>
+  <meta name="description" content="Linhagem, observabilidade e documentação para times de dados em Azure, Databricks e Power BI. Rebellion mapeia e monitora o ambiente; Babadoc guarda o que o time sabe sobre ele." />
+  <meta property="og:title" content="Rebellion + Babadoc — o mapa e a memória do seu ambiente de dados" />
+  <meta property="og:description" content="Para times de dados em Azure, Databricks e Power BI: linhagem, observabilidade e documentação — o contexto que a sua IA precisa para resolver chamados." />
+  <meta name="theme-color" content="#f6f8fa" />
+  <link rel="icon" href="assets/rebellion-logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="nav" id="topo">
+    <div class="wrap nav__inner">
+      <a class="brand" href="#topo" aria-label="Rebellion + Babadoc, início">
+        <span class="brand__marks">
+          <img src="assets/rebellion-logo.svg" alt="" width="24" height="24" />
+          <img src="assets/babadoc-logo.svg" alt="" width="24" height="24" />
+        </span>
+        <span>Rebellion <span class="brand__plus">+</span> Babadoc</span>
+      </a>
+      <nav class="nav__links" aria-label="Seções">
+        <a href="#stack">Stack atendida</a>
+        <a href="#plataformas">Plataformas</a>
+        <a href="#exemplo">Na prática</a>
+        <a href="#como">Como funciona</a>
+      </nav>
+      <a class="btn btn--dark btn--sm" href="#contato">Agendar demo</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="wrap hero__copy">
+        <p class="kicker"><span class="kicker__dot"></span>Para times de dados em Azure · Databricks · Power BI</p>
+        <h1>O <em>mapa</em> e a <em>memória</em><br />do seu ambiente de dados.</h1>
+        <p class="hero__lead">
+          O Rebellion mapeia e monitora cada pipeline, tabela e relatório. O Babadoc guarda o que o time sabe
+          sobre eles. Juntos, dão à IA da sua empresa o contexto para investigar e resolver chamados.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--dark" href="#contato">Agendar uma demo</a>
+          <a class="btn btn--line" href="#exemplo">Ver um chamado resolvido <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="hero__fit">Seu ambiente roda em Databricks, Data Factory, Synapse ou Airflow e entrega em Power BI ou Analysis Services? <a href="#stack">Veja a stack atendida</a>.</p>
+      </div>
+
+      <!-- Diagrama em camadas: quem pergunta → camada de contexto → ambiente -->
+      <div class="wrap">
+        <div class="stack" aria-label="Arquitetura: a IA consulta Rebellion e Babadoc, que leem o seu ambiente de dados">
+          <div class="stack__row">
+            <span class="stack__label">Quem pergunta</span>
+            <div class="stack__items">
+              <span class="chip">Assistente de IA da empresa</span>
+              <span class="chip">Agente de plantão</span>
+              <span class="chip">Service desk</span>
+              <span class="chip">Analistas e gestores</span>
+            </div>
+          </div>
+          <div class="stack__link" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="stack__row stack__row--core">
+            <span class="stack__label">Camada de contexto</span>
+            <div class="stack__core">
+              <div class="tile tile--reb">
+                <div class="tile__head"><img src="assets/rebellion-logo.svg" alt="" width="28" height="28" /><b>Rebellion</b><span>o mapa</span></div>
+                <p>Linhagem · Execuções · Qualidade · SLA</p>
+              </div>
+              <div class="tile tile--bab">
+                <div class="tile__head"><img src="assets/babadoc-logo.svg" alt="" width="28" height="28" /><b>Babadoc</b><span>a memória</span></div>
+                <p>Documentação · Regras · Casos resolvidos · Métricas</p>
+              </div>
+            </div>
+          </div>
+          <div class="stack__link" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="stack__row">
+            <span class="stack__label">Seu ambiente</span>
+            <div class="stack__items stack__items--src">
+              <span>Databricks</span><span>Unity Catalog</span><span>Data Factory</span><span>Synapse</span>
+              <span>Airflow</span><span>Power BI</span><span>Analysis Services</span><span>GitHub · Azure DevOps</span>
+              <span>SharePoint</span><span>ServiceNow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= STACK ATENDIDA ================= -->
+    <section class="section section--tint" id="stack">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Conectores Nativos</p>
+          <h2>Ecossistema integrado de ponta a ponta.</h2>
+          <p class="head__lead">Conexão nativa e não-invasiva com os principais motores de dados, orquestração e consumo analítico do mercado. Cada conector opera em modo estritamente somente leitura, preservando a governança e o controle da sua equipe de segurança.</p>
+        </div>
+
+        <ul class="fit" aria-label="Sinais de que serve para você">
+          <li><i aria-hidden="true"></i><span><b>Orquestração &amp; Lakehouse:</b> Pipelines em Databricks, Azure Data Factory, Synapse ou Airflow</span></li>
+          <li><i aria-hidden="true"></i><span><b>Consumo Analítico:</b> Camada semântica e relatórios em Power BI, Fabric e Analysis Services</span></li>
+          <li><i aria-hidden="true"></i><span><b>Gestão &amp; Operação:</b> Versionamento em GitHub / DevOps e incidentes via ServiceNow</span></li>
+        </ul>
+
+        <!-- Grid de Conectores (Focado em Valor de Negócio, sem expor métodos internos de coleta) -->
+        <div class="conn-grid">
+          <article class="conn-card">
+            <div class="conn-card__head">
+              <b>Databricks &amp; Lakehouse</b>
+              <span class="conn-badge">Processamento</span>
+            </div>
+            <p>Mapeamento automático de dependências entre notebooks, jobs programados e tabelas Delta Lake para linhagem de dados contínua.</p>
+          </article>
+
+          <article class="conn-card">
+            <div class="conn-card__head">
+              <b>Azure Data Factory &amp; Synapse</b>
+              <span class="conn-badge">Orquestração</span>
+            </div>
+            <p>Rastreabilidade completa de pipelines, fluxos de carga e atividades, detectando atrasos e falhas em tempo real.</p>
+          </article>
+
+          <article class="conn-card">
+            <div class="conn-card__head">
+              <b>Power BI &amp; Fabric</b>
+              <span class="conn-badge">Modelos Semânticos</span>
+            </div>
+            <p>Inventário inteligente de workspaces, datasets, relatórios e fórmulas DAX, conectando cada número do dashboard à sua origem.</p>
+          </article>
+
+          <article class="conn-card">
+            <div class="conn-card__head">
+              <b>ServiceNow &amp; IT Service</b>
+              <span class="conn-badge">Operações ITIL</span>
+            </div>
+            <p>Enriquecimento automático de chamados e incidentes com diagnóstico técnico instantâneo, causa raiz e linhagem associada.</p>
+          </article>
+
+          <article class="conn-card">
+            <div class="conn-card__head">
+              <b>Apache Airflow &amp; DAGs</b>
+              <span class="conn-badge">Engenharia</span>
+            </div>
+            <p>Monitoramento centralizado de tarefas, SLAs operacionais e histórico de execuções com alertas antes do impacto no cliente.</p>
+          </article>
+
+          <article class="conn-card">
+            <div class="conn-card__head">
+              <b>Repositórios Git &amp; CI/CD</b>
+              <span class="conn-badge">Versionamento</span>
+            </div>
+            <p>Rastreabilidade de código e transformações analíticas, correlacionando alterações em repositórios com o comportamento dos pipelines.</p>
+          </article>
+        </div>
+
+        <!-- Box de Segurança e Conformidade Não-Invasiva -->
+        <div class="sec-box">
+          <div class="sec-box__icon">🔒</div>
+          <div class="sec-box__content">
+            <h3>Arquitetura Não-Invasiva &amp; Segurança Corporativa</h3>
+            <div class="sec-box__grid">
+              <div>
+                <b>Acesso 100% Read-Only</b>
+                <p>Nenhuma alteração em ambientes de produção. O motor consome exclusivamente metadados operacionais estruturais.</p>
+              </div>
+              <div>
+                <b>Zero Cópia de Dados Sensíveis</b>
+                <p>Dados de clientes, transações financeiras e registros de negócio nunca são armazenados, copiados ou indexados.</p>
+              </div>
+              <div>
+                <b>Governança &amp; IAM Corporativo</b>
+                <p>Integração nativa com Microsoft Entra ID (SSO) ou Keycloak. Credenciais e permissões sob controle total da sua TI.</p>
+              </div>
+            </div>
+            <p class="sec-box__note"><i>A matriz detalhada de requisitos de infraestrutura e conectores é compartilhada na sessão técnica de validação de arquitetura sob NDA.</i></p>
+          </div>
+        </div>
+
+        <div class="integr">
+          <div><span class="integr__k">Login</span><p>SSO com Microsoft Entra ID ou Keycloak</p></div>
+          <div><span class="integr__k">IA</span><p>OpenAI, Anthropic, Gemini ou modelos servidos no próprio ambiente do cliente</p></div>
+          <div><span class="integr__k">Publicação</span><p>O Babadoc publica a documentação num portal Docusaurus por pull request</p></div>
+          <div><span class="integr__k">Deploy</span><p>Instalação via contêineres Docker, compatível com Kubernetes, Azure e AWS</p></div>
+        </div>
+
+        <p class="notyet"><b>Precisa de conectores adicionais?</b> Suporte sob medida para Snowflake, BigQuery, dbt, Tableau e outras ferramentas. <a href="#contato">Converse com nossos especialistas</a>.</p>
+      </div>
+    </section>
+
+    <!-- ================= OBSERVAÇÃO ================= -->
+    <section class="section">
+      <div class="wrap split">
+        <p class="eyebrow">A observação</p>
+        <div>
+          <h2 class="statement">O modelo de IA virou commodity. <span class="dim">O contexto do seu ambiente, não.</span></h2>
+          <div class="cols">
+            <p>Qualquer empresa tem acesso aos mesmos modelos. O que nenhum deles sabe é de onde vem o número do
+              painel de vendas, qual job falhou às cinco da manhã ou como o time resolveu esse mesmo erro no mês passado.</p>
+            <p>Sem esse contexto, a IA chuta. Com ele, investiga. Rebellion e Babadoc transformam o ambiente de dados
+              num banco estruturado que a IA consegue consultar — e que o time continua usando no dia a dia.</p>
+          </div>
+          <!-- Citação institucional / Manifesto -->
+          <figure class="quote">
+            <blockquote>“O modelo de IA virou commodity; o contexto estruturado do seu ambiente, não. Quando a IA opera sobre linhagem ativa e documentação viva, diagnósticos complexos que levavam horas passam a ser resolvidos em minutos.”</blockquote>
+            <figcaption><b>Rebellion &amp; Babadoc</b> · Arquitetura de Dados Autônoma</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXEMPLO ================= -->
+    <section class="section section--tint" id="exemplo">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Na prática</p>
+          <h2>Um chamado. Três perguntas que a IA precisa responder.</h2>
+        </div>
+
+        <div class="example">
+          <div class="example__ticket">
+            <span class="mono">INC0042137 · prioridade alta · 07:48</span>
+            <p>“O Painel de Vendas Diárias está com o dado de ontem. A reunião com a diretoria é às 9h.”</p>
+          </div>
+
+          <div class="table" role="table" aria-label="Contexto usado pela IA para resolver o chamado">
+            <div class="table__row table__row--head" role="row">
+              <span role="columnheader">O que a IA precisa saber</span>
+              <span role="columnheader">Onde está</span>
+              <span role="columnheader">O que ela encontra</span>
+            </div>
+            <div class="table__row" role="row">
+              <span role="cell"><b>De onde vem esse número?</b></span>
+              <span role="cell"><span class="src src--reb">Rebellion · linhagem</span></span>
+              <span role="cell">Painel ← <code>gold.fato_pedidos</code> ← job <code>dbx_pedidos_diario</code> ← pipeline <code>pl_ingestao_pedidos</code></span>
+            </div>
+            <div class="table__row" role="row">
+              <span role="cell"><b>O que rodou e o que falhou?</b></span>
+              <span role="cell"><span class="src src--reb">Rebellion · execuções</span></span>
+              <span role="cell">A cópia do ERP falhou às 05:12 por timeout. O refresh do dataset rodou depois, com o dado velho.</span>
+            </div>
+            <div class="table__row" role="row">
+              <span role="cell"><b>Como o time resolve isso?</b></span>
+              <span role="cell"><span class="src src--bab">Babadoc · troubleshooting</span></span>
+              <span role="cell">“Timeout após a janela de backup do ERP: reprocessar a cópia, depois o job e o refresh.”</span>
+            </div>
+          </div>
+
+          <div class="example__out">
+            <div class="timeline" aria-label="Ações executadas">
+              <span class="tl"><i></i>Pipeline reprocessado</span>
+              <span class="tl"><i></i>Job concluído</span>
+              <span class="tl"><i></i>Refresh do dataset</span>
+              <span class="tl tl--done"><i></i>Chamado respondido · 08:21</span>
+            </div>
+            <p class="example__note">A resposta ao chamado leva a causa raiz, a solução aplicada e o link do caso no Babadoc — que fica registrado para a próxima vez.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PLATAFORMAS ================= -->
+    <section class="section" id="plataformas">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">As plataformas</p>
+          <h2>Uma enxerga o ambiente. A outra lembra o que o time sabe.</h2>
+        </div>
+
+        <div class="products">
+          <article class="product">
+            <div class="product__top">
+              <img src="assets/rebellion-logo.svg" alt="" width="40" height="40" />
+              <div>
+                <h3>Rebellion</h3>
+                <p>Linhagem e observabilidade</p>
+              </div>
+            </div>
+            <!-- Trocar por print real da tela de linhagem (ambiente demo) -->
+            <figure class="shot" aria-label="Ilustração da tela de linhagem">
+              <svg viewBox="0 0 520 220" role="img" aria-label="Grafo de linhagem de exemplo com uma falha na origem">
+                <g class="edges">
+                  <path d="M118 50 C165 50 165 110 205 110"/><path d="M118 170 C165 170 165 110 205 110"/>
+                  <path d="M315 110 C350 110 350 70 385 70"/><path d="M315 110 C350 110 350 150 385 150"/>
+                  <path class="edge--hot" d="M118 50 C165 50 165 110 205 110"/>
+                </g>
+                <g class="node node--adf"><rect x="20" y="32" width="98" height="36" rx="8"/><text x="69" y="55">pl_ingestao</text></g>
+                <g class="node node--adf"><rect x="20" y="152" width="98" height="36" rx="8"/><text x="69" y="175">pl_clientes</text></g>
+                <g class="node node--dbx"><rect x="205" y="92" width="110" height="36" rx="8"/><text x="260" y="115">fato_pedidos</text></g>
+                <g class="node node--pbi"><rect x="385" y="52" width="120" height="36" rx="8"/><text x="445" y="75">Vendas Diárias</text></g>
+                <g class="node node--pbi"><rect x="385" y="132" width="120" height="36" rx="8"/><text x="445" y="155">Metas Comerciais</text></g>
+                <circle class="fail" cx="20" cy="32" r="6"/>
+              </svg>
+            </figure>
+            <ul class="caps">
+              <li><b>Linhagem ponta a ponta</b><span>Da tabela de origem à medida DAX do relatório, coletada automaticamente.</span></li>
+              <li><b>Situação do dia</b><span>O que rodou, falhou e atrasou hoje, com o motivo real e o SLA de cada produto.</span></li>
+              <li><b>Qualidade e falhas</b><span>Regras contra o “verde falso”, recorrência de falhas e plano de ação.</span></li>
+            </ul>
+          </article>
+
+          <article class="product">
+            <div class="product__top">
+              <img src="assets/babadoc-logo.svg" alt="" width="40" height="40" />
+              <div>
+                <h3>Babadoc</h3>
+                <p>Documentação e conhecimento</p>
+              </div>
+            </div>
+            <!-- Trocar por print real da tela de artefato (ambiente demo) -->
+            <figure class="shot shot--doc" aria-label="Ilustração da tela de artefato">
+              <div class="doc">
+                <div class="doc__row"><span class="pill">Pipeline</span><span class="pill pill--ok">Publicado</span><span class="doc__score">Cobertura <b>86%</b></span></div>
+                <div class="doc__bar"><span style="width:86%"></span></div>
+                <div class="doc__q"><span class="doc__k">Técnico</span><p>O que fazer quando a cópia do ERP falha?</p><span>Reprocessar após a janela de backup (05:30)…</span></div>
+                <div class="doc__q doc__q--todo"><span class="doc__k">Entrega</span><p>Quem é o dono do dado?</p><span>Pendente · obrigatória</span></div>
+              </div>
+            </figure>
+            <ul class="caps">
+              <li><b>Roteiro de documentação</b><span>Perguntas de negócio, técnicas e de entrega por tipo de artefato, ou escrita livre.</span></li>
+              <li><b>Cobertura e revisões</b><span>Quanto de cada área está documentado, o que falta e o que venceu.</span></li>
+              <li><b>Casos e métricas</b><span>Chamados resolvidos, regras de negócio e medidas DAX num só lugar.</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COMO FUNCIONA ================= -->
+    <section class="section section--tint" id="como">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Como funciona</p>
+          <h2>Contexto não vem de um prompt. Vem de um processo.</h2>
+        </div>
+        <ol class="flow">
+          <li>
+            <span class="flow__n">01</span>
+            <h3>Coletar</h3>
+            <p>Os coletores do Rebellion leem metadados, código e execuções de cada plataforma, com login corporativo (SSO), e montam o grafo de linhagem.</p>
+            <span class="flow__tags">Rebellion</span>
+          </li>
+          <li>
+            <span class="flow__n">02</span>
+            <h3>Documentar</h3>
+            <p>O time registra no Babadoc o que só ele sabe: regras de negócio, decisões, donos e como resolver cada incidente.</p>
+            <span class="flow__tags">Babadoc</span>
+          </li>
+          <li>
+            <span class="flow__n">03</span>
+            <h3>Conectar</h3>
+            <p>A IA da empresa acessa os dois bancos por SQL e API, com uma camada semântica que descreve tabelas e relações.</p>
+            <span class="flow__tags">SQL · API</span>
+          </li>
+          <li>
+            <span class="flow__n">04</span>
+            <h3>Resolver</h3>
+            <p>A IA investiga, executa e responde. Cada chamado resolvido volta para o Babadoc e enriquece o contexto.</p>
+            <span class="flow__tags">Ciclo contínuo</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= CASOS ================= -->
+    <section class="section" id="casos">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Casos de uso</p>
+          <h2>O que dá para pedir — em português, como para um colega.</h2>
+        </div>
+        <ul class="cases">
+          <li><p class="cases__q">“Se o pipeline de clientes parar hoje, quem é afetado?”</p><p class="cases__a">Tabelas, datasets e relatórios a jusante, com produto, tier de SLA e responsável.</p><span class="cases__t">Impacto</span></li>
+          <li><p class="cases__q">“Quantos pipelines falharam nas últimas 24 horas, por área?”</p><p class="cases__a">Consulta o histórico de execuções e responde com os números e os ofensores.</p><span class="cases__t">Operação</span></li>
+          <li><p class="cases__q">“Como é calculado o KPI de cobertura de estoque?”</p><p class="cases__a">A medida DAX, as tabelas de que depende e a regra de negócio documentada pelo dono.</p><span class="cases__t">Regra de negócio</span></li>
+          <li><p class="cases__q">“Esse job falha toda segunda. Por quê?”</p><p class="cases__a">Cruza recorrência, horários, dependências e mudanças de código, e sugere um plano.</p><span class="cases__t">Causa raiz</span></li>
+          <li><p class="cases__q">“O que está sem documentação na área de Logística?”</p><p class="cases__a">Os artefatos críticos sem dono ou sem troubleshooting, com um rascunho a partir do código.</p><span class="cases__t">Conhecimento</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= CONFIANÇA (faixa escura) ================= -->
+    <section class="band">
+      <div class="wrap">
+        <div class="head head--light">
+          <p class="eyebrow">Feito para o ambiente corporativo</p>
+          <h2>Roda na sua infraestrutura. Os metadados não saem de casa.</h2>
+        </div>
+        <div class="band__grid">
+          <div><b>No seu servidor</b><p>Contêineres Docker com PostgreSQL, na nuvem ou on-premises.</p></div>
+          <div><b>Login corporativo</b><p>SSO para usuários e coletores. Nenhuma senha guardada em planilha.</p></div>
+          <div><b>Seu modelo de IA</b><p>Use o provedor que a empresa já aprovou, inclusive modelos no próprio Databricks.</p></div>
+          <div><b>Papéis e auditoria</b><p>Admin, Editor e Membro, com trilha de quem criou, alterou, aprovou e publicou.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA / CONTATO ================= -->
+    <section class="cta" id="contato">
+      <div class="wrap cta__inner">
+        <div class="cta__header">
+          <span class="eyebrow">Contato &amp; Demonstração</span>
+          <h2>Veja as duas plataformas<br />— e a IA trabalhando sobre elas.</h2>
+          <p>Agende uma demonstração prática de 30 minutos num ambiente de dados fictício: linhagem, monitoramento, documentação e um chamado operacional resolvido do começo ao fim.</p>
+          <div class="cta__direct">
+            <span>Prefere e-mail direto?</span>
+            <a class="btn btn--line btn--sm" href="mailto:eciosf@gmail.com?subject=Contato%20Rebellion%20%2B%20Babadoc">eciosf@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="cta__card">
+          <form class="contact-form" id="contactForm" action="https://formsubmit.co/eciosf@gmail.com" method="POST">
+            <!-- Configurações FormSubmit (gratuito, sem backend) -->
+            <input type="hidden" name="_subject" value="Novo contato pelo site Rebellion + Babadoc!" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            
+            <div class="form-row">
+              <div class="form-field">
+                <label for="form-name">Nome completo <span class="req">*</span></label>
+                <input type="text" id="form-name" name="name" required placeholder="Seu nome" autocomplete="name" />
+              </div>
+              <div class="form-field">
+                <label for="form-email">E-mail de contato <span class="req">*</span></label>
+                <input type="email" id="form-email" name="email" required placeholder="seu.email@empresa.com" autocomplete="email" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="form-company">Empresa / Time</label>
+                <input type="text" id="form-company" name="company" placeholder="Ex.: Ambev, Logística, BI..." />
+              </div>
+              <div class="form-field">
+                <label for="form-interest">Interesse principal</label>
+                <select id="form-interest" name="interest">
+                  <option value="Demo completa">Agendar Demonstração (30 min)</option>
+                  <option value="Rebellion - Linhagem e Diagnóstico">Rebellion (Linhagem &amp; Diagnóstico)</option>
+                  <option value="Babadoc - Documentação Viva">Babadoc (Catálogo &amp; Documentação)</option>
+                  <option value="Conectores personalizados">Conectores personalizados</option>
+                  <option value="Outro">Outro assunto</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="form-message">Mensagem <span class="req">*</span></label>
+              <textarea id="form-message" name="message" rows="3" required placeholder="Conte brevemente sobre o seu ambiente ou o que gostaria de ver na demonstração..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--dark btn--submit" id="submitBtn">
+              <span>Enviar mensagem</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2.5 8H13.5M13.5 8L9 3.5M13.5 8L9 12.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+
+            <div class="form-status" id="formStatus" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <span class="brand__marks">
+          <img src="assets/rebellion-logo.svg" alt="" width="22" height="22" />
+          <img src="assets/babadoc-logo.svg" alt="" width="22" height="22" />
+        </span>
+        <span>Rebellion + Babadoc</span>
+      </div>
+      <nav class="footer__links" aria-label="Rodapé">
+        <a href="#stack">Stack atendida</a>
+        <a href="#plataformas">Plataformas</a>
+        <a href="#exemplo">Na prática</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <p class="footer__note">Exemplos com dados fictícios. Os nomes de produtos citados pertencem aos seus donos.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<title>Post — IA orquestradora</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f6f8fa; --surface: #ffffff; --line: #e3e8ee; --line-2: #d2d9e2;
+    --ink: #0b1220; --ink-2: #485467; --ink-3: #8691a3;
+    --gold: #c8960c; --gold-ink: #8a6100; --gold-soft: #fbf3dc;
+    --ember: #e0461f; --ember-ink: #b8360f; --ember-soft: #fdece6;
+    --ai: #6d4ee8; --ai-soft: #efebfd; --danger: #c2410c;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1080px; height: 1080px; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: "Geist", system-ui, sans-serif; -webkit-font-smoothing: antialiased;
+    padding: 72px; display: flex; flex-direction: column; overflow: hidden;
+  }
+  .kicker { display: flex; align-items: center; gap: 10px; font-size: 20px; color: var(--ink-2); font-weight: 500; }
+  .kicker img { width: 30px; height: 30px; border-radius: 8px; }
+  .kicker img + img { margin-left: -10px; box-shadow: 0 0 0 3px var(--bg); }
+  h1 { margin-top: 30px; font-size: 76px; line-height: 1.02; letter-spacing: -0.045em; font-weight: 600; }
+  h1 em { font-family: "Instrument Serif", Georgia, serif; font-style: italic; font-weight: 400; letter-spacing: -0.01em; color: var(--ai); }
+
+  .panels { margin-top: 52px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; flex: 1; }
+  .panel { border-radius: 22px; padding: 28px; display: flex; flex-direction: column; }
+  .panel--old { background: transparent; border: 2px dashed var(--line-2); }
+  .panel--new { background: var(--surface); border: 1px solid var(--line); box-shadow: 0 24px 48px -24px rgba(11,18,32,.18); }
+  .label { font-family: "Geist Mono", monospace; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+  .panel--new .label { color: var(--ai); }
+  .panel h2 { font-size: 30px; letter-spacing: -0.03em; font-weight: 600; margin-top: 8px; }
+  .panel--old h2 { color: var(--ink-3); }
+  .caption { margin-top: auto; padding-top: 18px; font-size: 18px; color: var(--ink-2); line-height: 1.45; }
+  .panel--old .caption { color: var(--ink-3); }
+  .caption b { color: var(--ink); font-weight: 600; }
+
+  /* Pilha de arquivos */
+  .files { position: relative; height: 330px; margin-top: 22px; }
+  .file {
+    position: absolute; width: 300px; padding: 16px 18px; border-radius: 12px;
+    background: var(--surface); border: 1px solid var(--line-2);
+    box-shadow: 0 8px 18px -10px rgba(11,18,32,.18);
+  }
+  .file b { font-family: "Geist Mono", monospace; font-weight: 500; font-size: 16px; color: var(--ink-2); }
+  .file i { display: block; height: 8px; border-radius: 4px; background: #e9edf2; margin-top: 10px; }
+  .file i:nth-of-type(2) { width: 82%; } .file i:nth-of-type(3) { width: 64%; }
+  .f1 { left: 4px; top: 0; transform: rotate(-4deg); opacity: .55; }
+  .f2 { left: 70px; top: 70px; transform: rotate(3deg); opacity: .7; }
+  .f3 { left: 20px; top: 146px; transform: rotate(-2deg); opacity: .85; }
+  .f4 { left: 84px; top: 220px; transform: rotate(2.5deg); }
+  .warn { position: absolute; font-size: 14px; font-weight: 600; color: var(--danger); background: #fff1ea; border: 1px solid #fbd5c3; padding: 4px 10px; border-radius: 999px; }
+  .w1 { right: -4px; top: 58px; transform: rotate(4deg); }
+  .w2 { left: -6px; top: 284px; transform: rotate(-3deg); }
+
+  /* Grafo */
+  .graph { margin-top: 10px; width: 100%; height: auto; }
+  .edge { fill: none; stroke: var(--line-2); stroke-width: 2; }
+  .orq { fill: none; stroke: var(--ai); stroke-width: 1.6; stroke-dasharray: 5 6; opacity: .65; }
+  .node rect { fill: var(--surface); stroke-width: 2; }
+  .node text { font-family: "Geist", sans-serif; font-size: 16px; font-weight: 500; fill: var(--ink); text-anchor: middle; }
+  .reb rect { stroke: var(--ember); }
+  .bab rect { stroke: var(--gold); }
+  .legend { display: flex; gap: 18px; font-size: 14px; color: var(--ink-2); margin-top: 4px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend i { width: 12px; height: 12px; border-radius: 3px; border: 2px solid; }
+  .lg-reb { border-color: var(--ember) !important; }
+  .lg-bab { border-color: var(--gold) !important; }
+  .lg-ai { border: 2px dashed var(--ai) !important; border-radius: 50% !important; }
+
+  .foot { margin-top: 34px; display: flex; justify-content: space-between; align-items: baseline; }
+  .foot p { font-size: 26px; letter-spacing: -0.02em; font-weight: 500; }
+  .foot p em { font-family: "Instrument Serif", Georgia, serif; font-size: 30px; }
+  .foot span { font-size: 18px; color: var(--ink-3); white-space: nowrap; }
+</style>
+</head>
+<body>
+  <div class="kicker">
+    <img src="../assets/rebellion-logo.svg" alt="" /><img src="../assets/babadoc-logo.svg" alt="" />
+    Rebellion + Babadoc
+  </div>
+
+  <h1>A IA não é o ator principal.<br /><em>É a orquestradora.</em></h1>
+
+  <div class="panels">
+    <section class="panel panel--old">
+      <p class="label">Contexto em arquivos</p>
+      <h2>Uma pasta de Markdown</h2>
+      <div class="files">
+        <div class="file f1"><b>README.md</b><i></i><i></i><i></i></div>
+        <div class="file f2"><b>runbook_v3_FINAL.md</b><i></i><i></i><i></i></div>
+        <div class="file f3"><b>notas_pipeline.md</b><i></i><i></i><i></i></div>
+        <div class="file f4"><b>glossario.md</b><i></i><i></i><i></i></div>
+        <span class="warn w1">desatualizado?</span>
+        <span class="warn w2">contradiz notas.md</span>
+      </div>
+      <p class="caption">Descreve, envelhece em silêncio<br />e é lido inteiro.</p>
+    </section>
+
+    <section class="panel panel--new">
+      <p class="label">Contexto em um modelo de dados</p>
+      <h2>Um modelo que responde</h2>
+      <svg class="graph" viewBox="0 0 456 330" role="img" aria-label="A IA consulta entidades de um modelo de dados">
+        <!-- Relações do modelo -->
+        <path class="edge" d="M78 66 H160"/>
+        <path class="edge" d="M296 66 H310"/>
+        <path class="edge" d="M228 86 V100"/>
+        <path class="edge" d="M78 86 V244"/>
+        <path class="edge" d="M378 86 V244"/>
+        <path class="edge" d="M146 264 H160"/>
+        <path class="edge" d="M296 264 H310"/>
+        <!-- Consultas da IA -->
+        <path class="orq" d="M228 165 L78 86"/>
+        <path class="orq" d="M228 165 L228 86"/>
+        <path class="orq" d="M228 165 L378 86"/>
+        <path class="orq" d="M228 165 L78 244"/>
+        <path class="orq" d="M228 165 L228 244"/>
+        <path class="orq" d="M228 165 L378 244"/>
+        <!-- Entidades -->
+        <g class="node reb"><rect x="10" y="46" width="136" height="40" rx="10"/><text x="78" y="72">Pipeline</text></g>
+        <g class="node reb"><rect x="160" y="46" width="136" height="40" rx="10"/><text x="228" y="72">Tabela</text></g>
+        <g class="node reb"><rect x="310" y="46" width="136" height="40" rx="10"/><text x="378" y="72">Relatório</text></g>
+        <g class="node reb"><rect x="10" y="244" width="136" height="40" rx="10"/><text x="78" y="270">Execução</text></g>
+        <g class="node bab"><rect x="160" y="244" width="136" height="40" rx="10"/><text x="228" y="270">Caso resolvido</text></g>
+        <g class="node bab"><rect x="310" y="244" width="136" height="40" rx="10"/><text x="378" y="270">Regra</text></g>
+        <!-- IA -->
+        <circle cx="228" cy="165" r="42" fill="#efebfd" stroke="#6d4ee8" stroke-width="2.5"/>
+        <text x="228" y="174" text-anchor="middle" font-family="Geist, sans-serif" font-size="26" font-weight="700" fill="#6d4ee8">IA</text>
+      </svg>
+      <div class="legend">
+        <span><i class="lg-reb"></i>Rebellion</span>
+        <span><i class="lg-bab"></i>Babadoc</span>
+        <span><i class="lg-ai"></i>consultas da IA</span>
+      </div>
+      <p class="caption"><b>Responde,</b> é atualizado a cada coleta<br />e é consultado só no que importa.</p>
+    </section>
+  </div>
+
+  <div class="foot">
+    <p>Contexto bom não é um arquivo. <em>É um modelo.</em></p>
+    <span>Rebellion + Babadoc</span>
+  </div>
+</body>
+</html>
