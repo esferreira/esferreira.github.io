@@ -101,7 +101,7 @@
     formStatus.className = "form-status form-status--success";
     formStatus.innerHTML = `
       <div style="display:grid;gap:10px;">
-        <div><strong>Tudo pronto!</strong> Escolha como deseja despachar sua mensagem para <b>eciosf@gmail.com</b>:</div>
+        <div><strong>Falta um passo:</strong> a mensagem já está escrita. Escolha por onde enviá-la para <b>eciosf@gmail.com</b>:</div>
         <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;">
           <a href="${gmailUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--dark btn--sm" style="font-size:.85rem;height:36px;padding:0 14px;">
             ✉️ Abrir no Gmail Web

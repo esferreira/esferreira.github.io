@@ -1,12 +1,12 @@
 # Site institucional — Rebellion + Babadoc
 
-Página estática (HTML, CSS e JS puros, sem build). Fica fora do app Next:
-está ignorada pelo ESLint e não entra no `tsconfig`.
+Página estática (HTML, CSS e JS puros, sem build), publicada pelo GitHub Pages
+a partir da raiz deste repositório.
 
 ## Rodar localmente
 
 ```bash
-python -m http.server 4400 --directory website
+python -m http.server 4400
 ```
 
 Abra http://localhost:4400.
@@ -25,5 +25,10 @@ Abra http://localhost:4400.
 
 ## Publicar
 
-Qualquer hospedagem estática serve (GitHub Pages, Vercel, Cloudflare Pages):
-publique o conteúdo da pasta `website/` como raiz.
+O push para `main` publica em https://esferreira.github.io/.
+
+## Envio do formulário
+
+Sem chave, o botão monta o e-mail e abre o Gmail ou o programa de e-mail do visitante.
+Para receber direto na caixa de entrada, crie uma chave gratuita em web3forms.com
+e preencha `WEB3FORMS_ACCESS_KEY` em `script.js`.

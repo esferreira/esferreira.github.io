@@ -105,7 +105,7 @@
 
         <ul class="fit" aria-label="Sinais de que serve para você">
           <li><i aria-hidden="true"></i><span><b>Orquestração &amp; Lakehouse:</b> Pipelines em Databricks, Azure Data Factory, Synapse ou Airflow</span></li>
-          <li><i aria-hidden="true"></i><span><b>Consumo Analítico:</b> Camada semântica e relatórios em Power BI, Fabric e Analysis Services</span></li>
+          <li><i aria-hidden="true"></i><span><b>Consumo Analítico:</b> Camada semântica e relatórios em Power BI e Analysis Services</span></li>
           <li><i aria-hidden="true"></i><span><b>Gestão &amp; Operação:</b> Versionamento em GitHub / DevOps e incidentes via ServiceNow</span></li>
         </ul>
 
@@ -129,7 +129,7 @@
 
           <article class="conn-card">
             <div class="conn-card__head">
-              <b>Power BI &amp; Fabric</b>
+              <b>Power BI</b>
               <span class="conn-badge">Modelos Semânticos</span>
             </div>
             <p>Inventário inteligente de workspaces, datasets, relatórios e fórmulas DAX, conectando cada número do dashboard à sua origem.</p>
@@ -171,8 +171,8 @@
                 <p>Nenhuma alteração em ambientes de produção. O motor consome exclusivamente metadados operacionais estruturais.</p>
               </div>
               <div>
-                <b>Zero Cópia de Dados Sensíveis</b>
-                <p>Dados de clientes, transações financeiras e registros de negócio nunca são armazenados, copiados ou indexados.</p>
+                <b>Metadados, não dados de negócio</b>
+                <p>Os coletores leem estrutura, código e execuções. As linhas das tabelas de negócio não são copiadas para as plataformas.</p>
               </div>
               <div>
                 <b>Governança &amp; IAM Corporativo</b>
@@ -187,7 +187,7 @@
           <div><span class="integr__k">Login</span><p>SSO com Microsoft Entra ID ou Keycloak</p></div>
           <div><span class="integr__k">IA</span><p>OpenAI, Anthropic, Gemini ou modelos servidos no próprio ambiente do cliente</p></div>
           <div><span class="integr__k">Publicação</span><p>O Babadoc publica a documentação num portal Docusaurus por pull request</p></div>
-          <div><span class="integr__k">Deploy</span><p>Instalação via contêineres Docker, compatível com Kubernetes, Azure e AWS</p></div>
+          <div><span class="integr__k">Deploy</span><p>Instalação via contêineres Docker, na nuvem ou on-premises</p></div>
         </div>
 
         <p class="notyet"><b>Precisa de conectores adicionais?</b> Suporte sob medida para Snowflake, BigQuery, dbt, Tableau e outras ferramentas. <a href="#contato">Converse com nossos especialistas</a>.</p>
@@ -259,7 +259,7 @@
               <span class="tl"><i></i>Refresh do dataset</span>
               <span class="tl tl--done"><i></i>Chamado respondido · 08:21</span>
             </div>
-            <p class="example__note">A resposta ao chamado leva a causa raiz, a solução aplicada e o link do caso no Babadoc — que fica registrado para a próxima vez.</p>
+            <p class="example__note">A resposta ao chamado leva a causa raiz, a solução aplicada e o link do caso no Babadoc, registrado para a próxima vez.</p>
           </div>
         </div>
       </div>
@@ -302,6 +302,7 @@
               <li><b>Linhagem ponta a ponta</b><span>Da tabela de origem à medida DAX do relatório, coletada automaticamente.</span></li>
               <li><b>Situação do dia</b><span>O que rodou, falhou e atrasou hoje, com o motivo real e o SLA de cada produto.</span></li>
               <li><b>Qualidade e falhas</b><span>Regras contra o “verde falso”, recorrência de falhas e plano de ação.</span></li>
+              <li><b>Conformidade da documentação</b><span>Confere se o que está no Babadoc ainda bate com tabelas, datasets e medidas DAX coletados. Onde diverge, a IA propõe a correção e o time aprova.</span></li>
             </ul>
           </article>
 
@@ -361,7 +362,7 @@
           <li>
             <span class="flow__n">04</span>
             <h3>Resolver</h3>
-            <p>A IA investiga, executa e responde. Cada chamado resolvido volta para o Babadoc e enriquece o contexto.</p>
+            <p>A IA investiga e responde. O time registra o caso no Babadoc, e o Rebellion confere se a documentação ainda bate com o ambiente.</p>
             <span class="flow__tags">Ciclo contínuo</span>
           </li>
         </ol>
@@ -381,6 +382,7 @@
           <li><p class="cases__q">“Como é calculado o KPI de cobertura de estoque?”</p><p class="cases__a">A medida DAX, as tabelas de que depende e a regra de negócio documentada pelo dono.</p><span class="cases__t">Regra de negócio</span></li>
           <li><p class="cases__q">“Esse job falha toda segunda. Por quê?”</p><p class="cases__a">Cruza recorrência, horários, dependências e mudanças de código, e sugere um plano.</p><span class="cases__t">Causa raiz</span></li>
           <li><p class="cases__q">“O que está sem documentação na área de Logística?”</p><p class="cases__a">Os artefatos críticos sem dono ou sem troubleshooting, com um rascunho a partir do código.</p><span class="cases__t">Conhecimento</span></li>
+          <li><p class="cases__q">“A documentação do painel de vendas ainda bate com o modelo?”</p><p class="cases__a">Compara tabelas, dataset e medidas DAX documentados com o que existe hoje e aponta cada divergência.</p><span class="cases__t">Conformidade</span></li>
         </ul>
       </div>
     </section>
@@ -415,12 +417,7 @@
         </div>
 
         <div class="cta__card">
-          <form class="contact-form" id="contactForm" action="https://formsubmit.co/eciosf@gmail.com" method="POST">
-            <!-- Configurações FormSubmit (gratuito, sem backend) -->
-            <input type="hidden" name="_subject" value="Novo contato pelo site Rebellion + Babadoc!" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
-            
+          <form class="contact-form" id="contactForm" action="#contato" method="POST">
             <div class="form-row">
               <div class="form-field">
                 <label for="form-name">Nome completo <span class="req">*</span></label>
@@ -435,7 +432,7 @@
             <div class="form-row">
               <div class="form-field">
                 <label for="form-company">Empresa / Time</label>
-                <input type="text" id="form-company" name="company" placeholder="Ex.: Ambev, Logística, BI..." />
+                <input type="text" id="form-company" name="company" placeholder="Ex.: Acme · time de Dados" />
               </div>
               <div class="form-field">
                 <label for="form-interest">Interesse principal</label>
