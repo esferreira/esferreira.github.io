@@ -69,11 +69,11 @@
           </li>
           <li>
             <strong>43 Facetas + YAML</strong>
-            <span>Engenharia reversa de <code>.pbit</code> gerando documentação e Semantic Views</span>
+            <span>Engenharia reversa de modelos de BI gerando documentação e Semantic Views</span>
           </li>
           <li>
             <strong>100% Read-Only</strong>
-            <span>Coleta não-invasiva via SSO sem copiar dados de negócio</span>
+            <span>Coleta não-invasiva de metadados sem copiar dados de negócio</span>
           </li>
         </ul>
       </div>
@@ -100,7 +100,7 @@
               </div>
               <div class="tile tile--bab">
                 <div class="tile__head"><img src="assets/babadoc-logo.svg" alt="" width="28" height="28" /><b>Babadoc</b><span>a memória</span></div>
-                <p>Engenharia Reversa .pbit · 43 Facetas · Semantic Views .yaml · Runbooks</p>
+                <p>Engenharia Reversa de BI · 43 Facetas · Semantic Views .yaml · Runbooks</p>
               </div>
             </div>
           </div>
@@ -200,7 +200,7 @@
               </div>
               <div>
                 <b>Governança &amp; IAM Corporativo</b>
-                <p>Integração nativa com Microsoft Entra ID (SSO) ou Keycloak. Credenciais e permissões sob controle total da sua TI.</p>
+                <p>Identidade corporativa integrada via Microsoft Entra ID ou Keycloak. Credenciais e permissões sob controle total da sua TI.</p>
               </div>
             </div>
             <p class="sec-box__note"><i>A matriz detalhada de requisitos de infraestrutura e conectores é compartilhada na sessão técnica de validação de arquitetura sob NDA.</i></p>
@@ -208,7 +208,7 @@
         </div>
 
         <div class="integr">
-          <div><span class="integr__k">Login</span><p>SSO com Microsoft Entra ID ou Keycloak</p></div>
+          <div><span class="integr__k">Login</span><p>Identidade corporativa com Microsoft Entra ID ou Keycloak</p></div>
           <div><span class="integr__k">IA</span><p>OpenAI, Anthropic, Gemini ou modelos servidos no próprio ambiente do cliente</p></div>
           <div><span class="integr__k">Publicação</span><p>O Babadoc publica a documentação num portal Docusaurus por pull request</p></div>
           <div><span class="integr__k">Deploy</span><p>Instalação via contêineres Docker, na nuvem ou on-premises</p></div>
@@ -264,7 +264,7 @@
             <ul class="compare-list">
               <li>Linhagem rastreia da medida DAX até o notebook PySpark e a tabela upstream em 1 clique.</li>
               <li>Auditoria Origem vs. Destino com <b>Delta Time Travel</b> (<code>TIMESTAMP AS OF</code>) provando exatamente onde o dado divergiu.</li>
-              <li>Engenharia reversa de <code>.pbit</code> preenchendo as 43 facetas + Semantic View <code>.yaml</code> com alerta contínuo de <i>drift</i>.</li>
+              <li>Engenharia reversa de modelos de BI preenchendo as 43 facetas + Semantic View <code>.yaml</code> com alerta contínuo de <i>drift</i>.</li>
               <li><b>Human-in-the-Loop:</b> o sistema entrega evidência, causa raiz e ação; o engenheiro faz apenas o julgamento.</li>
             </ul>
           </article>
@@ -295,9 +295,9 @@
               <span class="sim-tab__k">CHG0019304</span>
               <b>💥 Raio de Impacto &amp; Migração</b>
             </button>
-            <button type="button" class="sim-tab" role="tab" aria-selected="false" data-scenario="pbit">
+            <button type="button" class="sim-tab" role="tab" aria-selected="false" data-scenario="semantic">
               <span class="sim-tab__k">GOV0008421</span>
-              <b>📄 Engenharia Reversa .pbit → YAML</b>
+              <b>📄 Engenharia Reversa BI → YAML</b>
             </button>
           </div>
 
@@ -482,7 +482,7 @@
               </div>
             </figure>
             <ul class="caps">
-              <li><b>Engenharia Reversa Nativa de <code>.pbit</code></b><span>Extrai automaticamente tabelas, medidas DAX, Power Query (M), conexões AAS/Live Connection e páginas locais sem precisar subir dados.</span></li>
+              <li><b>Engenharia Reversa Nativa de Modelos de BI</b><span>Extrai automaticamente tabelas, medidas DAX, Power Query (M), conexões AAS/Live Connection e páginas dos relatórios sem copiar dados de negócio.</span></li>
               <li><b>Roteiro Oficial de 43 Facetas + Score</b><span>Cobertura auditada em Negócio (16), Engenharia/Contingência (22) e Entrega BI (5), medindo maturidade real por área.</span></li>
               <li><b>Gerador de Semantic Views (<code>.yaml</code>)</b><span>Converte regras de negócio e DAX em especificações semânticas SQL padronizadas, prontas para Text-to-SQL e agentes analíticos.</span></li>
               <li><b>Memória Operacional e Busca Full-Text</b><span>Centraliza runbooks de reprocessamento, prevenção de OOM, idempotência e histórico de incidentes versionado com busca instantânea.</span></li>
@@ -503,7 +503,7 @@
           <li>
             <span class="flow__n">01</span>
             <h3>Coletar</h3>
-            <p>Os coletores do Rebellion leem metadados, código e execuções de cada plataforma, com login corporativo (SSO), e montam o grafo de linhagem.</p>
+            <p>Os coletores do Rebellion leem metadados, código e execuções de cada plataforma, com identidade corporativa integrada, e montam o grafo de linhagem.</p>
             <span class="flow__tags">Rebellion</span>
           </li>
           <li>
@@ -555,7 +555,7 @@
         </div>
         <div class="band__grid">
           <div><b>No seu servidor</b><p>Contêineres Docker com PostgreSQL, na nuvem ou on-premises.</p></div>
-          <div><b>Login corporativo</b><p>SSO para usuários e coletores. Nenhuma senha guardada em planilha.</p></div>
+          <div><b>Identidade corporativa integrada</b><p>Autenticação corporativa para usuários e coletores. Nenhuma senha guardada em planilha.</p></div>
           <div><b>Seu modelo de IA</b><p>Use o provedor que a empresa já aprovou, inclusive modelos no próprio Databricks.</p></div>
           <div><b>Papéis e auditoria</b><p>Admin, Editor e Membro, com trilha de quem criou, alterou, aprovou e publicou.</p></div>
         </div>

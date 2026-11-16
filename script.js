@@ -164,24 +164,24 @@
       ],
       approvedSummary: "Decisão aprovada: descomissionamento adiado com segurança, plano de repontamento criado e donos dos painéis notificados com linhagem completa."
     },
-    pbit: {
+    semantic: {
       meta: "GOV0008421 · Novo Produto de Dados · 16:05",
       severity: "100% Documentado",
       sevClass: "sim__sev--ok",
       time: "Gerado em 38s",
-      title: "“Publicamos o dashboard Eficiência de Frota (.pbit). Precisamos documentá-lo no catálogo e habilitá-lo para consultas da IA.”",
+      title: "“Publicamos o dashboard Eficiência de Frota no Power BI. Precisamos documentá-lo no catálogo e habilitá-lo para consultas da IA.”",
       lineage: [
-        { label: "frota_eficiencia.pbit (local)", state: "is-ok" },
+        { label: "Modelo BI Eficiência de Frota", state: "is-ok" },
         { label: "Parser DAX / M / AAS", state: "is-ok" },
         { label: "Babadoc (43/43 Facetas)", state: "is-ok" },
         { label: "eficiencia_frota.yaml", state: "is-ok" }
       ],
       steps: [
         {
-          q: "1. Engenharia reversa local",
-          srcLabel: "Babadoc · extrator .pbit",
+          q: "1. Engenharia reversa do modelo BI",
+          srcLabel: "Babadoc · extrator semântico",
           srcClass: "src--bab",
-          ev: "Extraídas 14 tabelas, 28 medidas DAX, conexão Live Connection e 6 páginas direto do arquivo local, sem expor dados de negócio."
+          ev: "Extraídas 14 tabelas, 28 medidas DAX, conexão Live Connection e 6 páginas direto dos metadados do relatório, sem expor dados de negócio."
         },
         {
           q: "2. Roteiro oficial completo",
@@ -397,7 +397,7 @@
     `,
     delivery: `
       <div class="doc__q">
-        <span class="doc__k">Faceta #35 · Medidas DAX Extraídas (.pbit)</span>
+        <span class="doc__k">Faceta #35 · Medidas DAX Extraídas (Power BI)</span>
         <p>Quais medidas analíticas vivem no relatório?</p>
         <span><code>[Vol. Faturado Líquido]</code>, <code>[% Atingimento Meta]</code> e <code>[OTIF D-1]</code> — todas convertidas em SQL na camada semântica.</span>
       </div>
