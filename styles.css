@@ -973,10 +973,10 @@ h3 { font-size: 1.12rem; font-weight: 600; letter-spacing: -.015em; }
   }
 }
 
-/* ---------- Vitrine de Livros (Próximos Lançamentos) ---------- */
+/* ---------- Vitrine de Livros (Publicados & Próximos Lançamentos) ---------- */
 .books-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   align-items: stretch;
 }
@@ -1033,6 +1033,11 @@ h3 { font-size: 1.12rem; font-weight: 600; letter-spacing: -.015em; }
   color: #fff;
   border: 1px solid rgba(255, 255, 255, .18);
 }
+.book-badge--published {
+  background: var(--ok);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .22);
+}
 .book-card__body {
   display: flex;
   flex-direction: column;
@@ -1072,9 +1077,15 @@ h3 { font-size: 1.12rem; font-weight: 600; letter-spacing: -.015em; }
 .book-card__cta:hover {
   color: var(--ember-ink);
 }
+.book-card__cta--amazon {
+  color: var(--ok);
+}
+.book-card__cta--amazon:hover {
+  color: #0b5d2b;
+}
 @media (max-width: 1120px) {
   .books-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 760px) {
