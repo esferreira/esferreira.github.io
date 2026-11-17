@@ -9,7 +9,7 @@
   if (reduced || !("IntersectionObserver" in window)) return;
 
   const targets = document.querySelectorAll(
-    ".hero__metrics li, .stack, .fit li, .conn-card, .sec-box, .integr, .statement, .cols, .quote, .compare-card, .sim-cockpit, .product, .book-card, .flow li, .cases li, .band__grid div"
+    ".hero__metrics li, .stack, .fit li, .conn-card, .sec-box, .integr, .statement, .cols, .quote, .compare-card, .sim-cockpit, .product, .flow li, .cases li, .band__grid div"
   );
   targets.forEach((el) => el.classList.add("reveal"));
   const io = new IntersectionObserver((entries) => {
@@ -549,6 +549,29 @@ tables:
 
     submitBtn.disabled = false;
     submitBtn.innerHTML = originalBtnHtml;
+  });
+})();
+
+// Vitrine interativa de livros: clicar ou focar uma capa na estante destaca a descrição abaixo
+(function () {
+  const shelfBtns = document.querySelectorAll(".shelf-book[data-book-target]");
+  const descCards = document.querySelectorAll(".book-desc-card");
+  if (!shelfBtns.length || !descCards.length) return;
+
+  function highlightBook(targetId, scrollToCard) {
+    shelfBtns.forEach((btn) => btn.classList.toggle("is-active", btn.dataset.bookTarget === targetId));
+    descCards.forEach((card) => card.classList.toggle("is-highlighted", card.id === targetId));
+    if (scrollToCard) {
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+  }
+
+  shelfBtns.forEach((btn) => {
+    btn.addEventListener("mouseenter", () => highlightBook(btn.dataset.bookTarget, false));
+    btn.addEventListener("click", () => highlightBook(btn.dataset.bookTarget, true));
   });
 })();
 

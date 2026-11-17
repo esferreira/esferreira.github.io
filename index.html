@@ -547,119 +547,193 @@
       </div>
     </section>
 
-    <!-- ================= LIVROS / PRÓXIMOS LANÇAMENTOS ================= -->
+    <!-- ================= LIVROS / VITRINE & LANÇAMENTOS ================= -->
     <section class="section section--tint" id="livros">
       <div class="wrap">
         <div class="head">
           <p class="eyebrow">Livros &amp; Publicações Técnicas · Écio Soares Ferreira</p>
           <h2>Da trincheira de produção para o papel.</h2>
-          <p class="head__lead">Oito obras técnicas — 3 títulos já publicados na Amazon e 5 próximos lançamentos — que documentam engenharia de dados, Big Data, ciência de dados, observabilidade ativa e agentes de IA em produção.</p>
+          <p class="head__lead">Oito obras técnicas — 3 títulos já publicados na Amazon e 5 próximos lançamentos — cobrindo Big Data, Data Warehouse, Engenharia Assistida por IA, Ciência de Dados, Observabilidade Ativa e Agentes em Produção.</p>
         </div>
 
-        <div class="books-grid">
-          <article class="book-card">
-            <div class="book-card__cover">
-              <span class="book-badge book-badge--published">Disponível na Amazon</span>
-              <img src="assets/books/capa-aprendendo-pyspark.jpg" alt="Capa do livro Aprendendo PySpark: Passo a Passo" width="640" height="1024" loading="lazy" />
+        <div class="books-showcase">
+          <!-- Grande Estante Lado a Lado -->
+          <div class="books-showcase__stage">
+            <div class="books-stage__bar">
+              <span class="books-stage__title">Biblioteca Técnica · 8 Títulos</span>
+              <div class="books-stage__legend">
+                <span><i class="dot-amazon" aria-hidden="true"></i>3 Publicados na Amazon</span>
+                <span><i class="dot-soon" aria-hidden="true"></i>5 Próximos Lançamentos</span>
+              </div>
             </div>
-            <div class="book-card__body">
-              <span class="book-card__kicker">Big Data &amp; Apache Spark · ISBN 979-8873673964</span>
-              <h3>Aprendendo PySpark: Passo a Passo</h3>
-              <p>Guia completo de processamento distribuído com Python e Apache Spark: RDDs, DataFrames, Spark SQL, joins avançados, streaming e otimização.</p>
-              <a href="https://www.amazon.com.br/s?k=9798873673964+Aprendendo+PySpark+Ecio+Ferreira" target="_blank" rel="noopener noreferrer" class="book-card__cta book-card__cta--amazon">Comprar na Amazon <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
 
-          <article class="book-card">
-            <div class="book-card__cover">
-              <span class="book-badge book-badge--published">Disponível na Amazon</span>
-              <img src="assets/books/capa-bi-datawarehouse.jpg" alt="Capa do livro Business Intelligence e DataWarehouse: Guia para Iniciantes" width="640" height="1024" loading="lazy" />
-            </div>
-            <div class="book-card__body">
-              <span class="book-card__kicker">Analytics &amp; Modelagem · ISBN 979-8387019845</span>
-              <h3>Business Intelligence e DataWarehouse: Guia para Iniciantes</h3>
-              <p>Fundamentos de Business Intelligence e arquitetura de Data Warehouse: ETL, modelagem dimensional (Star Schema), OLAP e construção de painéis.</p>
-              <a href="https://www.amazon.com.br/s?k=9798387019845+Business+Intelligence+DataWarehouse+Ecio+Ferreira" target="_blank" rel="noopener noreferrer" class="book-card__cta book-card__cta--amazon">Comprar na Amazon <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
+            <div class="books-showcase__shelf" role="list" aria-label="Capas dos livros lado a lado">
+              <button type="button" class="shelf-book" role="listitem" data-book-target="book-1">
+                <div class="shelf-book__frame">
+                  <img src="assets/books/capa-aprendendo-pyspark.jpg" alt="Capa original: Aprendendo PySpark: Passo a Passo" width="1000" height="1499" loading="lazy" />
+                </div>
+                <span class="shelf-badge shelf-badge--amazon">Na Amazon</span>
+                <span class="shelf-book__name">Aprendendo PySpark</span>
+              </button>
 
-          <article class="book-card">
-            <div class="book-card__cover">
-              <span class="book-badge book-badge--published">Disponível na Amazon</span>
-              <img src="assets/books/capa-destroy-coding.jpg" alt="Capa do livro Destroy Coding: Como usar a Inteligência Artificial para criar códigos" width="640" height="1024" loading="lazy" />
-            </div>
-            <div class="book-card__body">
-              <span class="book-card__kicker">Engenharia Assistida por IA · ISBN 979-8290774381</span>
-              <h3>Destroy Coding: IA para Criar Códigos de Forma Rápida e Eficiente</h3>
-              <p>Como usar a Inteligência Artificial na prática para acelerar o desenvolvimento de software, refatorar sistemas e elevar a produtividade técnica.</p>
-              <a href="https://www.amazon.com.br/s?k=9798290774381+Destroy+Coding+Ecio+Ferreira" target="_blank" rel="noopener noreferrer" class="book-card__cta book-card__cta--amazon">Comprar na Amazon <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
+              <button type="button" class="shelf-book" role="listitem" data-book-target="book-2">
+                <div class="shelf-book__frame">
+                  <img src="assets/books/capa-bi-datawarehouse.jpg" alt="Capa original: Business Intelligence e Data Warehouse: Guia para Iniciantes" width="1000" height="1499" loading="lazy" />
+                </div>
+                <span class="shelf-badge shelf-badge--amazon">Na Amazon</span>
+                <span class="shelf-book__name">BI e Data Warehouse</span>
+              </button>
 
-          <article class="book-card">
-            <div class="book-card__cover">
-              <span class="book-badge book-badge--launch">Próximo Lançamento · 2ª Edição</span>
-              <img src="assets/books/capa-rebellion-2ed.jpg" alt="Capa do livro Rebellion: Inteligência, Linhagem e Observabilidade (2ª Edição)" width="640" height="1024" loading="lazy" />
-            </div>
-            <div class="book-card__body">
-              <span class="book-card__kicker">Observabilidade &amp; Inteligência de Dados</span>
-              <h3>Rebellion — Inteligência, Linhagem e Observabilidade</h3>
-              <p>Arquitetura de visibilidade e camada semântica viva: como um time de dados parou de descobrir os próprios erros pela boca do cliente — com ou sem IA.</p>
-              <a href="#contato" class="book-card__cta" data-book-title="Rebellion — Inteligência, Linhagem e Observabilidade (2ª Edição)">Quero ser avisado no lançamento <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
+              <button type="button" class="shelf-book" role="listitem" data-book-target="book-3">
+                <div class="shelf-book__frame">
+                  <img src="assets/books/capa-destroy-coding.jpg" alt="Capa original: Destroy Coding: Como usar a Inteligência Artificial para criar, inovar e dominar o futuro do trabalho" width="1000" height="1499" loading="lazy" />
+                </div>
+                <span class="shelf-badge shelf-badge--amazon">Na Amazon</span>
+                <span class="shelf-book__name">Destroy Coding</span>
+              </button>
 
-          <article class="book-card">
-            <div class="book-card__cover">
-              <span class="book-badge book-badge--launch">Próximo Lançamento · 2ª Edição</span>
-              <img src="assets/books/capa-babadoc-2ed.jpg" alt="Capa do livro Babadoc: Documentação Viva para Dados (2ª Edição)" width="640" height="1024" loading="lazy" />
-            </div>
-            <div class="book-card__body">
-              <span class="book-card__kicker">Governança &amp; Engenharia de Dados</span>
-              <h3>Babadoc — Documentação Viva para Dados</h3>
-              <p>Arquitetura e cultura de conhecimento vivo: roteiros de 43 facetas, engenharia reversa de BI, Semantic Views e governança ativa no mundo real.</p>
-              <a href="#contato" class="book-card__cta" data-book-title="Babadoc — Documentação Viva para Dados (2ª Edição)">Quero ser avisado no lançamento <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
+              <button type="button" class="shelf-book" role="listitem" data-book-target="book-4">
+                <div class="shelf-book__frame">
+                  <img src="assets/books/capa-rebellion-2ed.jpg" alt="Capa: Rebellion — Inteligência, Linhagem e Observabilidade (2ª Edição)" width="640" height="1024" loading="lazy" />
+                </div>
+                <span class="shelf-badge shelf-badge--soon">Próximo Lançamento</span>
+                <span class="shelf-book__name">Rebellion · 2ª Ed.</span>
+              </button>
 
-          <article class="book-card">
-            <div class="book-card__cover">
-              <span class="book-badge book-badge--launch">Próximo Lançamento · 2ª Edição</span>
-              <img src="assets/books/capa-ciencia-de-dados-2ed.jpg" alt="Capa do livro O B-A-BA da Ciência de Dados (2ª Edição)" width="640" height="1024" loading="lazy" />
-            </div>
-            <div class="book-card__body">
-              <span class="book-card__kicker">Estatística, Python &amp; IA</span>
-              <h3>O B-A-BA da Ciência de Dados</h3>
-              <p>Da intuição estatística aos modelos em produção: como entender dados, interpretar modelos e decifrar a inteligência artificial no mundo real.</p>
-              <a href="#contato" class="book-card__cta" data-book-title="O B-A-BA da Ciência de Dados (2ª Edição)">Quero ser avisado no lançamento <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
+              <button type="button" class="shelf-book" role="listitem" data-book-target="book-5">
+                <div class="shelf-book__frame">
+                  <img src="assets/books/capa-babadoc-2ed.jpg" alt="Capa: Babadoc — Documentação Viva para Dados (2ª Edição)" width="640" height="1024" loading="lazy" />
+                </div>
+                <span class="shelf-badge shelf-badge--soon">Próximo Lançamento</span>
+                <span class="shelf-book__name">Babadoc · 2ª Ed.</span>
+              </button>
 
-          <article class="book-card">
-            <div class="book-card__cover">
-              <span class="book-badge book-badge--launch">Próximo Lançamento · 2026</span>
-              <img src="assets/books/capa-engenheiro-ia.jpg" alt="Capa do livro O Guia Definitivo do Engenheiro de IA" width="640" height="1024" loading="lazy" />
-            </div>
-            <div class="book-card__body">
-              <span class="book-card__kicker">Sistemas de IA em Produção</span>
-              <h3>O Guia Definitivo do Engenheiro de IA</h3>
-              <p>Engenharia de IA no mundo real: agentes autônomos, RAG híbrido em 2 estágios, inferência local e estudos de caso sobre dados corporativos reais.</p>
-              <a href="#contato" class="book-card__cta" data-book-title="O Guia Definitivo do Engenheiro de IA">Quero ser avisado no lançamento <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
+              <button type="button" class="shelf-book" role="listitem" data-book-target="book-6">
+                <div class="shelf-book__frame">
+                  <img src="assets/books/capa-ciencia-de-dados-2ed.jpg" alt="Capa: O B-A-BA da Ciência de Dados (2ª Edição)" width="640" height="1024" loading="lazy" />
+                </div>
+                <span class="shelf-badge shelf-badge--soon">Próximo Lançamento</span>
+                <span class="shelf-book__name">B-A-BA Ciência de Dados</span>
+              </button>
 
-          <article class="book-card">
-            <div class="book-card__cover">
-              <span class="book-badge book-badge--launch">Próximo Lançamento · 2026</span>
-              <img src="assets/books/capa-langgraph-mundo-real.jpg" alt="Capa do livro LangGraph no Mundo Real" width="640" height="1024" loading="lazy" />
+              <button type="button" class="shelf-book" role="listitem" data-book-target="book-7">
+                <div class="shelf-book__frame">
+                  <img src="assets/books/capa-engenheiro-ia.jpg" alt="Capa: O Guia Definitivo do Engenheiro de IA" width="640" height="1024" loading="lazy" />
+                </div>
+                <span class="shelf-badge shelf-badge--soon">Próximo Lançamento</span>
+                <span class="shelf-book__name">Engenheiro de IA</span>
+              </button>
+
+              <button type="button" class="shelf-book" role="listitem" data-book-target="book-8">
+                <div class="shelf-book__frame">
+                  <img src="assets/books/capa-langgraph-mundo-real.jpg" alt="Capa: LangGraph no Mundo Real" width="640" height="1024" loading="lazy" />
+                </div>
+                <span class="shelf-badge shelf-badge--soon">Próximo Lançamento</span>
+                <span class="shelf-book__name">LangGraph no Mundo Real</span>
+              </button>
             </div>
-            <div class="book-card__body">
-              <span class="book-card__kicker">Orquestração de Agentes em Produção</span>
-              <h3>LangGraph no Mundo Real</h3>
-              <p>Guia prático de arquitetura: como tirar agentes de IA do Jupyter e colocá-los em produção com Python, FastAPI, bancos de dados, WhatsApp e portais web.</p>
-              <a href="#contato" class="book-card__cta" data-book-title="LangGraph no Mundo Real">Quero ser avisado no lançamento <span aria-hidden="true">→</span></a>
+          </div>
+
+          <!-- Descrições Estruturadas Abaixo das Capas -->
+          <div class="books-showcase__details">
+            <div class="books-group">
+              <div class="books-group__head">
+                <span class="books-group__pill books-group__pill--amazon">Disponíveis na Amazon</span>
+                <h3>Obras Já Publicadas (3)</h3>
+              </div>
+
+              <div class="books-desc-grid books-desc-grid--3">
+                <article class="book-desc-card" id="book-1">
+                  <div class="book-desc-card__top">
+                    <span class="book-desc-card__kicker">Big Data &amp; Apache Spark 3.5 · 424 págs.</span>
+                    <span class="book-desc-card__tag book-desc-card__tag--amazon">ISBN 979-8873673964</span>
+                  </div>
+                  <h4>Aprendendo PySpark: Passo a Passo</h4>
+                  <p>Guia prático e visual para dominar processamento distribuído com Python e Apache Spark: RDDs, DataFrames, Spark SQL, joins avançados, streaming e otimização.</p>
+                  <a href="https://www.amazon.com.br/dp/B0CRH9SJ6L" target="_blank" rel="noopener noreferrer" class="book-desc-card__cta book-desc-card__cta--amazon">Comprar na Amazon <span aria-hidden="true">↗</span></a>
+                </article>
+
+                <article class="book-desc-card" id="book-2">
+                  <div class="book-desc-card__top">
+                    <span class="book-desc-card__kicker">Analytics &amp; Modelagem · 174 págs.</span>
+                    <span class="book-desc-card__tag book-desc-card__tag--amazon">ISBN 979-8387019845</span>
+                  </div>
+                  <h4>Business Intelligence e Data Warehouse: Guia para Iniciantes</h4>
+                  <p>Fundamentos completos de Business Intelligence e arquitetura de Data Warehouse: processos de ETL, modelagem dimensional (Star Schema), OLAP e entrega analítica.</p>
+                  <a href="https://www.amazon.com.br/dp/B0C47LSGB4" target="_blank" rel="noopener noreferrer" class="book-desc-card__cta book-desc-card__cta--amazon">Comprar na Amazon <span aria-hidden="true">↗</span></a>
+                </article>
+
+                <article class="book-desc-card" id="book-3">
+                  <div class="book-desc-card__top">
+                    <span class="book-desc-card__kicker">Engenharia Assistida por IA · 2025</span>
+                    <span class="book-desc-card__tag book-desc-card__tag--amazon">ISBN 979-8290774381</span>
+                  </div>
+                  <h4>Destroy Coding: IA para Criar, Inovar e Dominar o Futuro do Trabalho</h4>
+                  <p>Método direto (Create | Command | Deploy) para usar Inteligência Artificial na prática, acelerar o desenvolvimento de software e entregar resultados reais em produção.</p>
+                  <a href="https://www.amazon.com.br/dp/B0FGNM9TX3" target="_blank" rel="noopener noreferrer" class="book-desc-card__cta book-desc-card__cta--amazon">Comprar na Amazon <span aria-hidden="true">↗</span></a>
+                </article>
+              </div>
             </div>
-          </article>
+
+            <div class="books-group">
+              <div class="books-group__head">
+                <span class="books-group__pill books-group__pill--soon">Próximos Lançamentos · 2026</span>
+                <h3>2ª Edições &amp; Obras Inéditas (5)</h3>
+              </div>
+
+              <div class="books-desc-grid books-desc-grid--5">
+                <article class="book-desc-card" id="book-4">
+                  <div class="book-desc-card__top">
+                    <span class="book-desc-card__kicker">Observabilidade &amp; Linhagem</span>
+                    <span class="book-desc-card__tag book-desc-card__tag--soon">Próximo Lançamento · 2ª Ed.</span>
+                  </div>
+                  <h4>Rebellion — Inteligência, Linhagem e Observabilidade</h4>
+                  <p>Arquitetura de visibilidade e camada semântica viva: como um time de dados parou de descobrir os próprios erros pela boca do cliente — com ou sem IA.</p>
+                  <a href="#contato" class="book-desc-card__cta" data-book-title="Rebellion — Inteligência, Linhagem e Observabilidade (2ª Edição)">Quero ser avisado no lançamento <span aria-hidden="true">→</span></a>
+                </article>
+
+                <article class="book-desc-card" id="book-5">
+                  <div class="book-desc-card__top">
+                    <span class="book-desc-card__kicker">Governança &amp; Engenharia de Dados</span>
+                    <span class="book-desc-card__tag book-desc-card__tag--soon">Próximo Lançamento · 2ª Ed.</span>
+                  </div>
+                  <h4>Babadoc — Documentação Viva para Dados</h4>
+                  <p>Arquitetura e cultura de conhecimento vivo: roteiros de 43 facetas, engenharia reversa de BI, Semantic Views (.yaml) e auditoria contínua de drift.</p>
+                  <a href="#contato" class="book-desc-card__cta" data-book-title="Babadoc — Documentação Viva para Dados (2ª Edição)">Quero ser avisado no lançamento <span aria-hidden="true">→</span></a>
+                </article>
+
+                <article class="book-desc-card" id="book-6">
+                  <div class="book-desc-card__top">
+                    <span class="book-desc-card__kicker">Estatística, Python &amp; Modelos</span>
+                    <span class="book-desc-card__tag book-desc-card__tag--soon">Próximo Lançamento · 2ª Ed.</span>
+                  </div>
+                  <h4>O B-A-BA da Ciência de Dados</h4>
+                  <p>Da intuição estatística e análise exploratória até modelos em produção: como entender dados, validar hipóteses e interpretar IA no mundo real.</p>
+                  <a href="#contato" class="book-desc-card__cta" data-book-title="O B-A-BA da Ciência de Dados (2ª Edição)">Quero ser avisado no lançamento <span aria-hidden="true">→</span></a>
+                </article>
+
+                <article class="book-desc-card" id="book-7">
+                  <div class="book-desc-card__top">
+                    <span class="book-desc-card__kicker">Sistemas de IA em Produção</span>
+                    <span class="book-desc-card__tag book-desc-card__tag--soon">Próximo Lançamento · 2026</span>
+                  </div>
+                  <h4>O Guia Definitivo do Engenheiro de IA</h4>
+                  <p>Engenharia de IA no mundo real: agentes autônomos, RAG híbrido em 2 estágios, inferência local (ONNX/SLMs), guardrails e estudos de caso corporativos.</p>
+                  <a href="#contato" class="book-desc-card__cta" data-book-title="O Guia Definitivo do Engenheiro de IA">Quero ser avisado no lançamento <span aria-hidden="true">→</span></a>
+                </article>
+
+                <article class="book-desc-card" id="book-8">
+                  <div class="book-desc-card__top">
+                    <span class="book-desc-card__kicker">Orquestração de Agentes</span>
+                    <span class="book-desc-card__tag book-desc-card__tag--soon">Próximo Lançamento · 2026</span>
+                  </div>
+                  <h4>LangGraph no Mundo Real</h4>
+                  <p>Guia prático de arquitetura: como tirar agentes de IA do Jupyter e colocá-los em produção com Python, FastAPI, checkpoints, bancos de dados, WhatsApp e portais web.</p>
+                  <a href="#contato" class="book-desc-card__cta" data-book-title="LangGraph no Mundo Real">Quero ser avisado no lançamento <span aria-hidden="true">→</span></a>
+                </article>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
