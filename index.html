@@ -31,8 +31,8 @@
         <a href="#observacao">Por que funciona</a>
         <a href="#exemplo">Simulador</a>
         <a href="#plataformas">Plataformas</a>
+        <a href="#comparativo">Comparativo</a>
         <a href="#livros">Livros</a>
-        <a href="#como">Como funciona</a>
       </nav>
       <a class="btn btn--dark btn--sm" href="#contato">Agendar demo</a>
     </div>
@@ -493,8 +493,180 @@
       </div>
     </section>
 
+    <!-- ================= COMPARATIVO DE MERCADO ================= -->
+    <section class="section section--tint" id="comparativo">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Posicionamento de Mercado · Onde cada plataforma atua</p>
+          <h2>Já temos Datadog, SageMaker ou Purview.<br />Por que Rebellion + Babadoc?</h2>
+          <p class="head__lead">Ferramentas de APM monitoram servidores; plataformas de IA treinam e servem modelos; catálogos clássicos inventariam tabelas. Nenhuma delas enxerga dentro da fórmula DAX que alimenta a diretoria nem entrega o contexto vivo para a IA resolver chamados de dados de ponta a ponta.</p>
+        </div>
+
+        <!-- 4 Categorias Lado a Lado -->
+        <div class="mkt-grid" aria-label="Comparativo entre categorias de plataformas do mercado e o combo Rebellion + Babadoc">
+          <article class="mkt-card">
+            <div class="mkt-card__top">
+              <span class="mkt-card__tag">Infra &amp; APM</span>
+              <span class="mono">Datadog · Dynatrace · New Relic</span>
+            </div>
+            <h3>Observabilidade de Infraestrutura</h3>
+            <ul class="mkt-card__points">
+              <li><b>Onde brilha:</b> Saúde de servidores, clusters Kubernetes, APM, latência de rede e logs de microsserviços.</li>
+              <li><b>Onde para:</b> Mostra o container e o job em verde (<code>SUCCEEDED</code>), mas não sabe que a tabela Gold recebeu <code>0 linhas</code> nem por que um indicador no Power BI divergiu do ERP.</li>
+            </ul>
+          </article>
+
+          <article class="mkt-card">
+            <div class="mkt-card__top">
+              <span class="mkt-card__tag">ML &amp; Computação</span>
+              <span class="mono">Amazon SageMaker · Bedrock · Databricks</span>
+            </div>
+            <h3>Plataformas de IA &amp; Lakehouse</h3>
+            <ul class="mkt-card__points">
+              <li><b>Onde brilha:</b> Treinamento de modelos, pipelines Spark/Delta em escala e hospedagem/inferência segura de LLMs.</li>
+              <li><b>Onde para:</b> Entrega o motor de cálculo e de IA, mas sem o mapa até a medida DAX e sem a memória operacional documentada, qualquer modelo responde sem contexto de negócio.</li>
+            </ul>
+          </article>
+
+          <article class="mkt-card">
+            <div class="mkt-card__top">
+              <span class="mkt-card__tag">Governança Clássica</span>
+              <span class="mono">Microsoft Purview · Collibra · Monte Carlo</span>
+            </div>
+            <h3>Catálogos &amp; Qualidade Tradicionais</h3>
+            <ul class="mkt-card__points">
+              <li><b>Onde brilha:</b> Inventário passivo para auditoria LGPD, classificação de sensibilidade e anomalias isoladas de volume.</li>
+              <li><b>Onde para:</b> Exige preenchimento manual que nasce defasado, não lê fórmulas DAX + Power Query (M) até o notebook e não gera prova de causa raiz para tickets em produção.</li>
+            </ul>
+          </article>
+
+          <article class="mkt-card mkt-card--combo">
+            <div class="mkt-card__top">
+              <span class="mkt-card__tag mkt-card__tag--combo">Camada Complementar</span>
+              <span class="mono">Rebellion + Babadoc</span>
+            </div>
+            <h3>Inteligência Analítica &amp; Contexto Vivo</h3>
+            <ul class="mkt-card__points">
+              <li><b>Como conecta:</b> 100% <i>read-only</i> sobre os ativos que você já paga (Databricks, SageMaker/Bedrock, ADF, Airflow, Power BI e ServiceNow) — sem copiar dados de negócio.</li>
+              <li><b>O que só ele faz:</b> Une linhagem até a medida DAX, detector de “Verde Falso” com Delta Time Travel, engenharia reversa em 43 facetas + Semantic Views <code>.yaml</code> e diagnóstico com aprovação humana.</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Matriz Comparativa de Capacidades -->
+        <div class="comp-matrix-wrap">
+          <div class="comp-matrix__bar">
+            <b>Matriz de Cobertura Técnica</b>
+            <span class="mono">Infraestrutura × Motor de IA × Governança × Operação Analítica Fim a Ponta</span>
+          </div>
+          <div class="comp-matrix-scroll">
+            <table class="comp-matrix" aria-label="Matriz detalhada de capacidades entre Datadog, Amazon SageMaker, catálogos clássicos e Rebellion + Babadoc">
+              <thead>
+                <tr>
+                  <th scope="col">Capacidade Operacional</th>
+                  <th scope="col">APM &amp; Infra<br /><span class="th-sub">Datadog · New Relic</span></th>
+                  <th scope="col">ML &amp; Cloud IA<br /><span class="th-sub">SageMaker · Bedrock</span></th>
+                  <th scope="col">Catálogos Clássicos<br /><span class="th-sub">Purview · Collibra</span></th>
+                  <th scope="col" class="th-highlight">Rebellion + Babadoc<br /><span class="th-sub">O Mapa e a Memória</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>Observabilidade de CPU, Kubernetes, APM e logs de API</b></td>
+                  <td><span class="cm-badge cm-badge--ok">✓ Nativo</span></td>
+                  <td><span class="cm-badge cm-badge--mid">Parcial</span></td>
+                  <td><span class="cm-badge cm-badge--no">—</span></td>
+                  <td class="td-highlight"><span class="cm-badge cm-badge--mid">Consome via API</span></td>
+                </tr>
+                <tr>
+                  <td><b>Treinamento, endpoints ML e inferência de LLMs em escala</b></td>
+                  <td><span class="cm-badge cm-badge--no">—</span></td>
+                  <td><span class="cm-badge cm-badge--ok">✓ Nativo</span></td>
+                  <td><span class="cm-badge cm-badge--no">—</span></td>
+                  <td class="td-highlight"><span class="cm-badge cm-badge--mid">BYO-AI (usa o seu modelo)</span></td>
+                </tr>
+                <tr>
+                  <td><b>Linhagem fim a ponta do pipeline até a fórmula DAX do Power BI</b></td>
+                  <td><span class="cm-badge cm-badge--no">—</span></td>
+                  <td><span class="cm-badge cm-badge--no">—</span></td>
+                  <td><span class="cm-badge cm-badge--mid">Parcial (só tabela)</span></td>
+                  <td class="td-highlight"><span class="cm-badge cm-badge--hero">✓ Pipeline → Delta → DAX</span></td>
+                </tr>
+                <tr>
+                  <td><b>Detecção de “Verde Falso” (job OK com 0 linhas / partição D-1)</b></td>
+                  <td><span class="cm-badge cm-badge--no">—</span></td>
+                  <td><span class="cm-badge cm-badge--no">—</span></td>
+                  <td><span class="cm-badge cm-badge--mid">Parcial (atraso)</span></td>
+                  <td class="td-highlight"><span class="cm-badge cm-badge--hero">✓ Nativo + Time Travel</span></td>
+                </tr>
+                <tr>
+                  <td><b>Engenharia reversa automática de BI → 43 Facetas + <code>.yaml</code></b></td>
+                  <td><span class="cm-badge cm-badge--no">—</span></td>
+                  <td><span class="cm-badge cm-badge--no">—</span></td>
+                  <td><span class="cm-badge cm-badge--no">—</span></td>
+                  <td class="td-highlight"><span class="cm-badge cm-badge--hero">✓ Nativo (Babadoc)</span></td>
+                </tr>
+                <tr>
+                  <td><b>Auditoria contínua de <i>drift</i> (Documentação vs. Produção)</b></td>
+                  <td><span class="cm-badge cm-badge--no">—</span></td>
+                  <td><span class="cm-badge cm-badge--no">—</span></td>
+                  <td><span class="cm-badge cm-badge--no">—</span></td>
+                  <td class="td-highlight"><span class="cm-badge cm-badge--hero">✓ Determinístico por PR</span></td>
+                </tr>
+                <tr>
+                  <td><b>Diagnóstico de chamados (ServiceNow) com SQL-RAG e evidência real</b></td>
+                  <td><span class="cm-badge cm-badge--no">—</span></td>
+                  <td><span class="cm-badge cm-badge--mid">Construção manual</span></td>
+                  <td><span class="cm-badge cm-badge--no">—</span></td>
+                  <td class="td-highlight"><span class="cm-badge cm-badge--hero">✓ Causa raiz em ~90s</span></td>
+                </tr>
+                <tr>
+                  <td><b>Implantação 100% <i>Read-Only</i> sem copiar dados de negócio</b></td>
+                  <td><span class="cm-badge cm-badge--ok">✓ Agente/Logs</span></td>
+                  <td><span class="cm-badge cm-badge--mid">Depende do dado</span></td>
+                  <td><span class="cm-badge cm-badge--mid">Parcial</span></td>
+                  <td class="td-highlight"><span class="cm-badge cm-badge--hero">✓ 100% Metadados</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Faixa Executiva de Impacto / ROI para Parceiros e Engenharia -->
+        <div class="roi-strip" aria-label="Impacto operacional para times e parceiros de modernização">
+          <div class="roi-strip__copy">
+            <span class="roi-strip__eyebrow">Por que integra e não compete</span>
+            <h3>O elo que faltava para seu investimento em Cloud e IA gerar retorno imediato.</h3>
+            <p>Em vez de trocar seu Datadog, SageMaker ou Databricks, o Rebellion + Babadoc pluga-se acima dos metadados para eliminar semanas de arqueologia manual e transformar cada chamado ou migração em decisão auditável.</p>
+            <div class="roi-strip__actions">
+              <a href="#contato" class="btn btn--dark btn--sm">Avaliar no seu ambiente</a>
+              <a href="#exemplo" class="btn btn--line btn--sm">Simular um chamado</a>
+            </div>
+          </div>
+
+          <div class="roi-cards">
+            <div class="roi-card">
+              <strong>4h → 90s</strong>
+              <span class="roi-card__kpi">-96% no tempo de triagem</span>
+              <p>Investigação completa de falha silenciosa ou KPI divergente já com prova origem vs. destino.</p>
+            </div>
+            <div class="roi-card">
+              <strong>3 sem → 1 dia</strong>
+              <span class="roi-card__kpi">Engenharia reversa de legado</span>
+              <p>Mapeamento de notebooks, pipelines ADF, medidas DAX e dependências antes de migrar.</p>
+            </div>
+            <div class="roi-card roi-card--wide">
+              <strong>Zero Lock-in · Zero Cópia de Dados</strong>
+              <span class="roi-card__kpi">100% Read-Only &amp; BYO-AI (Bedrock, SageMaker, OpenAI ou Databricks)</span>
+              <p>Roda via Docker dentro da sua própria nuvem usando o provedor de IA que sua equipe de segurança já aprovou.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= COMO FUNCIONA ================= -->
-    <section class="section section--tint" id="como">
+    <section class="section" id="como">
       <div class="wrap">
         <div class="head">
           <p class="eyebrow">Como funciona</p>
@@ -530,7 +702,7 @@
     </section>
 
     <!-- ================= CASOS ================= -->
-    <section class="section" id="casos">
+    <section class="section section--tint" id="casos">
       <div class="wrap">
         <div class="head">
           <p class="eyebrow">Casos de uso</p>
@@ -548,7 +720,7 @@
     </section>
 
     <!-- ================= LIVROS / VITRINE & LANÇAMENTOS ================= -->
-    <section class="section section--tint" id="livros">
+    <section class="section" id="livros">
       <div class="wrap">
         <div class="head">
           <p class="eyebrow">Livros &amp; Publicações Técnicas · Écio Soares Ferreira</p>
@@ -829,6 +1001,7 @@
         <a href="#observacao">Por que funciona</a>
         <a href="#exemplo">Simulador</a>
         <a href="#plataformas">Plataformas</a>
+        <a href="#comparativo">Comparativo</a>
         <a href="#livros">Livros</a>
         <a href="#contato">Contato</a>
       </nav>
