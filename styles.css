@@ -973,4 +973,121 @@ h3 { font-size: 1.12rem; font-weight: 600; letter-spacing: -.015em; }
   }
 }
 
+/* ---------- Vitrine de Livros (Próximos Lançamentos) ---------- */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+.book-card {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .2s;
+}
+.book-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--line-2);
+  box-shadow: var(--shadow);
+}
+.book-card__cover {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #f4efe6;
+  aspect-ratio: 5 / 8;
+  box-shadow: 0 10px 24px -10px rgba(11, 18, 32, .22), inset -4px 0 8px rgba(11, 18, 32, .06);
+}
+.book-card__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.book-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  font-family: var(--mono);
+  font-size: .64rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(11, 18, 32, .22);
+  max-width: calc(100% - 20px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.book-badge--launch {
+  background: var(--ink);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .18);
+}
+.book-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.book-card__kicker {
+  font-family: var(--mono);
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--ember-ink);
+  font-weight: 600;
+}
+.book-card__body h3 {
+  font-size: 1rem;
+  line-height: 1.25;
+  color: var(--ink);
+}
+.book-card__body p {
+  font-size: .85rem;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+.book-card__cta {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.book-card__cta:hover {
+  color: var(--ember-ink);
+}
+@media (max-width: 1120px) {
+  .books-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 760px) {
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 

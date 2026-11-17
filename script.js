@@ -9,7 +9,7 @@
   if (reduced || !("IntersectionObserver" in window)) return;
 
   const targets = document.querySelectorAll(
-    ".hero__metrics li, .stack, .fit li, .conn-card, .sec-box, .integr, .statement, .cols, .quote, .compare-card, .sim-cockpit, .product, .flow li, .cases li, .band__grid div"
+    ".hero__metrics li, .stack, .fit li, .conn-card, .sec-box, .integr, .statement, .cols, .quote, .compare-card, .sim-cockpit, .product, .book-card, .flow li, .cases li, .band__grid div"
   );
   targets.forEach((el) => el.classList.add("reveal"));
   const io = new IntersectionObserver((entries) => {
@@ -551,4 +551,25 @@ tables:
     submitBtn.innerHTML = originalBtnHtml;
   });
 })();
+
+// Pré-seleciona o livro no formulário de contato ao clicar em "Quero ser avisado no lançamento"
+(function () {
+  const links = document.querySelectorAll("[data-book-title]");
+  const interestEl = document.getElementById("form-interest");
+  const messageEl = document.getElementById("form-message");
+  if (!links.length) return;
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      const title = link.dataset.bookTitle;
+      if (interestEl) {
+        interestEl.value = "Livros & Publicações (Pré-lançamento)";
+      }
+      if (messageEl && title) {
+        messageEl.value = `Olá, Ecio! Gostaria de ser avisado no lançamento do livro "${title}".`;
+      }
+    });
+  });
+})();
+
 
